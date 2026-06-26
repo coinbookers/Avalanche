@@ -111,3 +111,17 @@ def main():
             "0xABCDEFABCDEFABCDEFABCDEFABCDEFABCDEFABCD"
         )
     )
+
+    request = interaction.create_request()
+
+    Validator.validate(request)
+
+    Reporter.display(request)
+
+    print("Network:", config.name)
+    print("Asset:", "avax")
+    print("Chain ID:", config.chain_id)
+
+
+if __name__ == "__main__":
+    main()
